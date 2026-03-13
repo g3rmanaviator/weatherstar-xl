@@ -1,0 +1,9 @@
+services:
+  weatherstar-xl:
+    image: ghcr.io/g3rmanaviator/weatherstar-xl:latest
+    container_name: weatherstar-xl
+    ports:
+      - "8080:8080"
+    environment:
+      - MAPBOX_API_KEY=${MAPBOX_API_KEY}
+    restart: unless-stopped
